@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061689342290311000CEA32D /* FileDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061689332290311000CEA32D /* FileDownloader.swift */; };
+		061689362290462700CEA32D /* CatchingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061689352290462700CEA32D /* CatchingController.swift */; };
+		06168939229086A300CEA32D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06168938229086A300CEA32D /* Service.swift */; };
 		0661CA7F228F340D0018E48D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661CA7E228F340D0018E48D /* AppDelegate.swift */; };
-		0661CA81228F340D0018E48D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661CA80228F340D0018E48D /* ViewController.swift */; };
+		0661CA81228F340D0018E48D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661CA80228F340D0018E48D /* HomeVC.swift */; };
 		0661CA84228F340D0018E48D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0661CA82228F340D0018E48D /* Main.storyboard */; };
 		0661CA86228F340F0018E48D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0661CA85228F340F0018E48D /* Assets.xcassets */; };
 		0661CA89228F340F0018E48D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0661CA87228F340F0018E48D /* LaunchScreen.storyboard */; };
 		0661CA94228F340F0018E48D /* FileDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661CA93228F340F0018E48D /* FileDownloaderTests.swift */; };
+		0661CAA2228F43F20018E48D /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661CAA1228F43F20018E48D /* ImageCell.swift */; };
+		0661CAA4228F66290018E48D /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661CAA3228F66290018E48D /* ImageItem.swift */; };
+		0661CAA7228F6F840018E48D /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0661CAA6228F6F840018E48D /* CodableExtension.swift */; };
+		46245E5AE4FAA18CB16701DF /* Pods_FileDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF89B1EC80051341AAC3BA56 /* Pods_FileDownloader.framework */; };
+		541E605EF3DC354B44577BFA /* Pods_FileDownloaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01713556429F962E013F919 /* Pods_FileDownloaderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061689332290311000CEA32D /* FileDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloader.swift; sourceTree = "<group>"; };
+		061689352290462700CEA32D /* CatchingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchingController.swift; sourceTree = "<group>"; };
+		06168938229086A300CEA32D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		0661CA7B228F340D0018E48D /* FileDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0661CA7E228F340D0018E48D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0661CA80228F340D0018E48D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0661CA80228F340D0018E48D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0661CA83228F340D0018E48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0661CA85228F340F0018E48D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0661CA88228F340F0018E48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +47,15 @@
 		0661CA8F228F340F0018E48D /* FileDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0661CA93228F340F0018E48D /* FileDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloaderTests.swift; sourceTree = "<group>"; };
 		0661CA95228F340F0018E48D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0661CAA1228F43F20018E48D /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		0661CAA3228F66290018E48D /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
+		0661CAA6228F6F840018E48D /* CodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtension.swift; sourceTree = "<group>"; };
+		17D23293C8DE5E1BA9BE4CDC /* Pods-FileDownloader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FileDownloader.debug.xcconfig"; path = "Target Support Files/Pods-FileDownloader/Pods-FileDownloader.debug.xcconfig"; sourceTree = "<group>"; };
+		5792C3FBE7C2A25ACE36A4B2 /* Pods-FileDownloaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FileDownloaderTests.debug.xcconfig"; path = "Target Support Files/Pods-FileDownloaderTests/Pods-FileDownloaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF89B1EC80051341AAC3BA56 /* Pods_FileDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FileDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC666BCC083DFA27AE4C767B /* Pods-FileDownloader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FileDownloader.release.xcconfig"; path = "Target Support Files/Pods-FileDownloader/Pods-FileDownloader.release.xcconfig"; sourceTree = "<group>"; };
+		E01713556429F962E013F919 /* Pods_FileDownloaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FileDownloaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F342180CCC159719EA930F43 /* Pods-FileDownloaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FileDownloaderTests.release.xcconfig"; path = "Target Support Files/Pods-FileDownloaderTests/Pods-FileDownloaderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46245E5AE4FAA18CB16701DF /* Pods_FileDownloader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +71,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541E605EF3DC354B44577BFA /* Pods_FileDownloaderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061689372290869300CEA32D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				06168938229086A300CEA32D /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		0661CA72228F340D0018E48D = {
 			isa = PBXGroup;
 			children = (
 				0661CA7D228F340D0018E48D /* FileDownloader */,
 				0661CA92228F340F0018E48D /* FileDownloaderTests */,
 				0661CA7C228F340D0018E48D /* Products */,
+				FD65C29549B0FE54998ECA74 /* Pods */,
+				2968B0AD8C7A6A3FD21095BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +109,13 @@
 		0661CA7D228F340D0018E48D /* FileDownloader */ = {
 			isa = PBXGroup;
 			children = (
+				061689372290869300CEA32D /* Service */,
+				0661CAA5228F6F750018E48D /* Extensions */,
+				0661CAA0228F34350018E48D /* Controllers */,
+				0661CA9F228F342E0018E48D /* Views */,
+				0661CA9E228F34240018E48D /* Models */,
 				0661CA7E228F340D0018E48D /* AppDelegate.swift */,
-				0661CA80228F340D0018E48D /* ViewController.swift */,
+				0661CA80228F340D0018E48D /* HomeVC.swift */,
 				0661CA82228F340D0018E48D /* Main.storyboard */,
 				0661CA85228F340F0018E48D /* Assets.xcassets */,
 				0661CA87228F340F0018E48D /* LaunchScreen.storyboard */,
@@ -96,6 +133,59 @@
 			path = FileDownloaderTests;
 			sourceTree = "<group>";
 		};
+		0661CA9E228F34240018E48D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0661CAA3228F66290018E48D /* ImageItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0661CA9F228F342E0018E48D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0661CAA1228F43F20018E48D /* ImageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0661CAA0228F34350018E48D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				061689332290311000CEA32D /* FileDownloader.swift */,
+				061689352290462700CEA32D /* CatchingController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0661CAA5228F6F750018E48D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0661CAA6228F6F840018E48D /* CodableExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2968B0AD8C7A6A3FD21095BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF89B1EC80051341AAC3BA56 /* Pods_FileDownloader.framework */,
+				E01713556429F962E013F919 /* Pods_FileDownloaderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD65C29549B0FE54998ECA74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17D23293C8DE5E1BA9BE4CDC /* Pods-FileDownloader.debug.xcconfig */,
+				CC666BCC083DFA27AE4C767B /* Pods-FileDownloader.release.xcconfig */,
+				5792C3FBE7C2A25ACE36A4B2 /* Pods-FileDownloaderTests.debug.xcconfig */,
+				F342180CCC159719EA930F43 /* Pods-FileDownloaderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0661CA98228F340F0018E48D /* Build configuration list for PBXNativeTarget "FileDownloader" */;
 			buildPhases = (
+				0DDAE727FA1282526E51CE52 /* [CP] Check Pods Manifest.lock */,
 				0661CA77228F340D0018E48D /* Sources */,
 				0661CA78228F340D0018E48D /* Frameworks */,
 				0661CA79228F340D0018E48D /* Resources */,
+				468B3AB73304A3B51D368862 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0661CA9B228F340F0018E48D /* Build configuration list for PBXNativeTarget "FileDownloaderTests" */;
 			buildPhases = (
+				FEA9939FA24897198B6FB618 /* [CP] Check Pods Manifest.lock */,
 				0661CA8B228F340F0018E48D /* Sources */,
 				0661CA8C228F340F0018E48D /* Frameworks */,
 				0661CA8D228F340F0018E48D /* Resources */,
@@ -192,13 +285,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DDAE727FA1282526E51CE52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FileDownloader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		468B3AB73304A3B51D368862 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FileDownloader/Pods-FileDownloader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FileDownloader/Pods-FileDownloader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEA9939FA24897198B6FB618 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FileDownloaderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0661CA77228F340D0018E48D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0661CA81228F340D0018E48D /* ViewController.swift in Sources */,
+				061689342290311000CEA32D /* FileDownloader.swift in Sources */,
+				06168939229086A300CEA32D /* Service.swift in Sources */,
+				061689362290462700CEA32D /* CatchingController.swift in Sources */,
+				0661CAA4228F66290018E48D /* ImageItem.swift in Sources */,
+				0661CA81228F340D0018E48D /* HomeVC.swift in Sources */,
 				0661CA7F228F340D0018E48D /* AppDelegate.swift in Sources */,
+				0661CAA2228F43F20018E48D /* ImageCell.swift in Sources */,
+				0661CAA7228F6F840018E48D /* CodableExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +526,13 @@
 		};
 		0661CA99228F340F0018E48D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17D23293C8DE5E1BA9BE4CDC /* Pods-FileDownloader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C5657XP2G;
 				INFOPLIST_FILE = FileDownloader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,17 +540,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mostafa.FileDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0661CA9A228F340F0018E48D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC666BCC083DFA27AE4C767B /* Pods-FileDownloader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C5657XP2G;
 				INFOPLIST_FILE = FileDownloader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,12 +560,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mostafa.FileDownloader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		0661CA9C228F340F0018E48D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5792C3FBE7C2A25ACE36A4B2 /* Pods-FileDownloaderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +588,7 @@
 		};
 		0661CA9D228F340F0018E48D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F342180CCC159719EA930F43 /* Pods-FileDownloaderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

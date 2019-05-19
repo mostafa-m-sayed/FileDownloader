@@ -26,7 +26,7 @@ class Service {
             .validate()
             .responseJSON { response in
                 guard response.result.isSuccess else {
-                    print("Error while fetching remote rooms: \(String(describing: response.result.error))")
+                    print("Error while fetching Images: \(String(describing: response.result.error))")
                     completion(nil)
                     return
                 }

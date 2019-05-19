@@ -25,4 +25,8 @@ class ImageCell: UICollectionViewCell {
         }
         
     }
+    override func prepareForReuse() {
+        image.image = nil
+        fileDownloader.stopDownload()
+    }
 }

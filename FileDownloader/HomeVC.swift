@@ -9,8 +9,8 @@
 import UIKit
 
 enum RefreshType {
-    case Top
-    case Bottom
+    case PullToRefresh
+    case Pagination
 }
 class HomeVC: UIViewController {
     
@@ -32,7 +32,7 @@ class HomeVC: UIViewController {
             self.refreshControl?.endRefreshing()
             self.startEndActivity(start: false)
             if images != nil {
-                if self.refresh != nil && self.refresh! == .Top {
+                if self.refresh != nil && self.refresh! == .PullToRefresh {
                     self.images.removeAll()
                 }
                 self.images.append(contentsOf: images!)
@@ -64,7 +64,7 @@ class HomeVC: UIViewController {
     @objc func refreshStream() {
         //Reset Pagination counters
         pageNumber = 0
-        refresh = .Top
+        refresh = .PullToRefresh
         loadImages()
     }
     
@@ -90,12 +90,10 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         if scrollView == collectionView {
             let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
             if floor(bottomEdge) >= floor(scrollView.contentSize.height) {
-                // ("downMax: \(self.bottomRefreshReady)")
-                if refresh != .Top {
+                if refresh != .PullToRefresh {
                     pageNumber+=1
                     if pageNumber < totalPages {
-                        // SINGLETON.startLoadingActivity(self.view)
-                        refresh = .Bottom
+                        refresh = .Pagination
                         startEndActivity(start: true)
                         loadImages()
                     }

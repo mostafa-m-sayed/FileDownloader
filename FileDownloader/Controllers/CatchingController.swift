@@ -9,31 +9,34 @@
 import Foundation
 class CachingController: NSObject {
     static let shared = CachingController()
-    private var currentAccessCounts = Dictionary<String, Int>()
+    private var hitsCount = Dictionary<String, Int>()
     var cache = NSCache<AnyObject, AnyObject>()
-    override init() {
-        cache.countLimit = 3
+    var cacheCountLimit = 10
+
+    override private init() {
+        super.init()
+        cache.countLimit = cacheCountLimit
     }
-    func setObjectForKey(imageData: Data, imageKey: String) {
-        cache.setObject(imageData as AnyObject, forKey: imageKey as AnyObject)
-        if currentAccessCounts.count >= cache.countLimit {
+    func setObjectForKey(data: Data, key: String) {
+        cache.setObject(data as AnyObject, forKey: key as AnyObject)
+        if hitsCount.count >= cache.countLimit {
             removedLeastUsedCache()
         }
-        saveToAccessCounts(key: imageKey)
+        updateHitsCount(key: key)
     }
     
-    func getObjectForKey(imageKey: String) -> Data? {
-        saveToAccessCounts(key: imageKey)
-        return cache.object(forKey: imageKey as AnyObject) as? Data
+    func getObjectForKey(key: String) -> Data? {
+        updateHitsCount(key: key)
+        return cache.object(forKey: key as AnyObject) as? Data
     }
     func removeAllCache() {
         cache.removeAllObjects()
-        currentAccessCounts.removeAll()
+        hitsCount.removeAll()
     }
     func removedLeastUsedCache() {
         var leastKey = ""
         var leastCount = 0
-        for item in currentAccessCounts {
+        for item in hitsCount {
             if item.value < leastCount {
                 leastCount = item.value
                 leastKey = item.key
@@ -41,15 +44,16 @@ class CachingController: NSObject {
         }
         cache.removeObject(forKey: leastKey as AnyObject)
     }
-    func saveToAccessCounts(key: String) {
+    
+    func updateHitsCount(key: String) {
         var exists = false
-        for item in currentAccessCounts where item.key == key {
+        for item in hitsCount where item.key == key {
             exists = true
         }
         if exists {
-            currentAccessCounts[key] = (currentAccessCounts[key] ?? 0) + 1
+            hitsCount[key] = (hitsCount[key] ?? 0) + 1
         } else {
-            currentAccessCounts[key] = 0
+            hitsCount[key] = 0
         }
     }
 }

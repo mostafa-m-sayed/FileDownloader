@@ -18,7 +18,7 @@ class FileDownloader {
 
     func download(completion: @escaping (_ data: Data) -> Void)
     {
-        if let cachedImage = CachingController.shared.getObjectForKey(imageKey: "\(self.request!.url!)"){
+        if let cachedImage = CachingController.shared.getObjectForKey(key: "\(self.request!.url!)"){
             completion(cachedImage)
             return
         }
@@ -29,11 +29,13 @@ class FileDownloader {
             (data, response, error) in
             
             guard let data = data else { return }
-            CachingController.shared.setObjectForKey(imageData: data, imageKey: "\(self.request!.url!)")
+            CachingController.shared.setObjectForKey(data: data, key: "\(self.request!.url!)")
             completion(data)
             }.resume()
     }
     func stopDownload() {
+        guard let session = session else { return }
         session.invalidateAndCancel()
+        self.session = URLSession(configuration: URLSession.shared.configuration, delegate: nil, delegateQueue:OperationQueue.main)
     }
 }
